@@ -1,0 +1,19 @@
+{
+  "name": "simple-node-js-server",
+  "version": "1.0.0",
+  "description": "a simple node server usedfor hoasting test ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test",
+    "node",
+    "server"
+  ],
+  "author": "rafikchb",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
