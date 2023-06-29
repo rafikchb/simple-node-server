@@ -7,4 +7,4 @@ jobs:
  deploy:
      runs-on: self-hosted
      steps:
-         - run: echo "hello word" 
+         - run: sudo echo "hello word" 
