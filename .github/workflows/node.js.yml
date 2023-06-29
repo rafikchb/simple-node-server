@@ -5,6 +5,6 @@ on:
     
 jobs:
  deploy:
-     runs-on: self-hosted
+     runs-on: ubuntu-latest
      steps:
-         - run: sudo echo "hello word" 
+         - run: echo "hello word" 
