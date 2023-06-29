@@ -8,5 +8,8 @@ on:
 jobs:
  deploy:
      runs-on: self-hosted
+
      steps:
+         - uses: actions/checkout@v3
          - run: echo "hello word" 
+         - run: npm i
