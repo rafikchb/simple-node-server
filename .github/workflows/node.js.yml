@@ -1,7 +1,8 @@
 name: continius-delivry
 on:
-    push: 
+    push:
         branches: ["live"]
+    
 
 jobs:
     deploy:
