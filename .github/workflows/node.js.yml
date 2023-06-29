@@ -2,6 +2,8 @@ name: continius-delivry
 on:
  push:
   branches: ["live"]
+ workflow_dispatch:
+   
     
 jobs:
  deploy:
