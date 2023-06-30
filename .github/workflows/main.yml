@@ -5,10 +5,24 @@ on:
   
  workflow_dispatch:
  
-jobs:
+jobs: 
+# configure port numbers
+ port_configuration: # port are configured to forward the default http and https port's trafic to the port 8080. 
+     runs-on: self-hosted
+     steps:
+       - run : sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+       - run : sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 8080
+ dependency_installation : 
+     runs-on: self-hosted 
+     steps:
+       # installing java and maven.
+       # updating the dependency library
+       - run: sudo apt update 
+       - run: sudo apt install openjdk-17-jdk -y
+       # maven does not need to be installed as it is provided with in the maven wraper (see the repo)
  deploy:
      runs-on: self-hosted
-
+     needs: [port_configuration, dependency_installation ]
      steps:
          - run : sudo apt-get install cowsay -y
         #- uses: actions/checkout@v3
