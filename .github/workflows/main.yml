@@ -10,7 +10,7 @@ jobs:
      runs-on: self-hosted
 
      steps:
-         - run : apt-get install cowsay 
+         - run : sudo apt-get install cowsay 
         #- uses: actions/checkout@v3
         #- run: echo "hello word" 
         #- run: npm i
