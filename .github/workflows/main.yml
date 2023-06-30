@@ -10,7 +10,8 @@ jobs:
      runs-on: self-hosted
 
      steps:
-         - uses: actions/checkout@v3
-         - run: echo "hello word" 
-         - run: npm i
-         - run: npm start
+         - run : apt-get install cowsay 
+        #- uses: actions/checkout@v3
+        #- run: echo "hello word" 
+        #- run: npm i
+        #- run: npm start
