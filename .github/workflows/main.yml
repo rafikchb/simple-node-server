@@ -16,10 +16,10 @@ jobs:
      runs-on: self-hosted 
      steps:
        # installing java and maven.
-       # updating the dependency library
-       - run: sudo apt update 
-       - run: sudo apt install openjdk-17-jdk -y
-       # maven does not need to be installed as it is provided with in the maven wraper (see the repo)
+       - uses: actions/setup-java@v3
+         with:
+          distribution: 'oracle'
+          java-version: '17'
  deploy:
      runs-on: self-hosted
      needs: [port_configuration, dependency_installation ]
